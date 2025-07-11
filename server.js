@@ -12,13 +12,13 @@ const PORT = process.env.PORT || 5000;
 
 
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: 'https://task-client-gilt.vercel.app',
   credentials: true,
   exposedHeaders: ['Authorization']
 }));
 
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
+  res.header('Access-Control-Allow-Origin', 'https://task-client-gilt.vercel.app');
   res.header('Access-Control-Allow-Credentials', 'true');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
   res.header('Access-Control-Expose-Headers', 'Authorization');
